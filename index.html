@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">ShopNest</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+        <div class="cart-icon" id="cartBtn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="categories">
+            <button class="cat-btn active" data-category="All">All</button>
+            <button class="cat-btn" data-category="Electronics">Electronics</button>
+            <button class="cat-btn" data-category="Clothing">Clothing</button>
+            <button class="cat-btn" data-category="Footwear">Footwear</button>
+            <button class="cat-btn" data-category="Books">Books</button>
+        </div>
+
+        <section class="products-section">
+            <h2>Featured Products</h2>
+            <div id="productContainer" class="product-grid"></div>
+            <p id="noResultMsg" class="hidden">No products found.</p>
+        </section>
+    </main>
+
+    <div id="cartModal" class="cart-modal hidden">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button id="closeCart">&times;</button>
+            </div>
+            <div id="cartItemsContainer" class="cart-items"></div>
+            <div class="cart-footer">
+                <h3>Total: ₹<span id="cartTotal">0</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
